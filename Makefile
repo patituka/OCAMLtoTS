@@ -27,12 +27,11 @@ install: ## Install development dependencies
 
 .PHONY: build
 build: ## Build the project
-	$(DUNE) build @react @node # @react and @node are dune aliases: https://dune.readthedocs.io/en/stable/overview.html#term-alias
-  # Another way to build the project would be just calling `dune build`, which will build the `@@default` alias: https://dune.readthedocs.io/en/stable/reference/aliases.html#default
+	$(DUNE) build @my-app @client 
 
 .PHONY: build_verbose
 build_verbose: ## Build the project
-	$(DUNE) build --verbose @react @node
+	$(DUNE) build --verbose @my-app @client 
 
 .PHONY: serve
 serve: ## Serve the application with a local HTTP server
@@ -56,4 +55,4 @@ format-check: ## Checks if format is correct
 
 .PHONY: watch
 watch: ## Watch for the filesystem and rebuild on every change
-	$(DUNE) build --watch @react @node
+	$(DUNE) build --watch @my-app @client 

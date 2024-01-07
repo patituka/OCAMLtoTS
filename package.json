@@ -1,15 +1,20 @@
 {
   "scripts": {
-    "bundle": "webpack --mode production --entry ./_build/default/src/output/src/ReactApp.js",
-    "serve": "webpack serve --open --mode development --entry ./_build/default/src/output/src/ReactApp.js"
+    "bundle": "webpack --mode production --entry ./_build/default/src/app/src/app.js",
+    "serve": "webpack serve --open --mode development --config webpack.config.js"
   },
   "dependencies": {
+    "@rescript/core": "^0.6.0",
+    "bs-fetch": "^0.5.0",
+    "bs-webapi": "^0.15.2",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "reason-react": "0.7.0",
+    "rescript": "^10.1.4"
   },
   "devDependencies": {
-    "webpack": "^5.73.0",
+    "webpack": "^5.89.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.1"
+    "webpack-dev-server": "^4.15.1"
   }
 }

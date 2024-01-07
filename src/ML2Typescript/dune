@@ -1,0 +1,16 @@
+(melange.emit
+ (target app)
+ (alias client)
+ (module_systems es6)
+ (preprocess
+  (pps melange.ppx))
+ (libraries))
+
+(ocamllex Lexers)
+
+(ocamlyacc Syntax)
+
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A -w -33-32-27))))

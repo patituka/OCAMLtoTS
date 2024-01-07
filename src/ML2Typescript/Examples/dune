@@ -1,0 +1,9 @@
+(executable
+ (name Main)
+ (modes byte)
+ (libraries))
+
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A -w -33-32-27))))
